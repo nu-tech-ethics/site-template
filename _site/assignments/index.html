@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Assignments</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/assets/main.css">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163192686-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-163192686-1');
+    </script>
+    </head>
+    <body class="one-column">
+        <div class="container">
+            <!-- banner -->
+<header>
+    <i class="desktop fas fa-balance-scale"></i>
+    <div class="title-text desktop">
+        <h1><a href="/">COURSE TITLE</a></h1>
+        <h2>COURSE TERM</h2>
+    </div>
+    <a class="mobile" href="#" aria-label="menu">
+        <i class="menu-toggle fas fa-bars"></i>
+    </a>
+    <h1 class="mobile">COURSE TITLE</h1>
+</header>
+
+            <nav>
+    <ul>
+        <li ><a href="/syllabus/">Syllabus</a></li>
+        <li ><a href="/" >Schedule</a></li>
+        <li class="active"><a href="/assignments/">Assignments</a></li>
+        <li ><a href="/resources/">Resources</a></li>
+    </ul>
+</nav>
+
+            <main>
+                
+
+    
+        <h1>Assignments</h1>
+    
+   
+                
+
+
+
+
+            
+<section class="assignments">
+    <table class="assignments-table">
+        <thead>
+            <tr>
+                <th>Week</th>
+                <th>Assignment</th>
+                <th>Due</th>
+                <th>Days Left</th>
+            </tr>
+        </thead>
+        <tbody>
+        
+        
+        
+        
+        
+        
+            
+            
+            
+            
+            
+            
+            
+            
+            <tr>
+                <td>
+                        Week 2
+                    
+                </td>
+                <td>
+                    
+                     
+                     
+                        <a class="pj" href="/assignments/sample">
+                            Sample 
+                            <i class="fas fa-link"></i>
+                        </a> 
+                                       
+                </td>
+                <td>Thu, 01/11</td>
+                <td>
+                    <span class="due-date">
+                        01/11/24
+                    </span> 
+                </td>
+            </tr>
+            
+        
+        </tbody>
+    </table>
+
+    
+</section>
+
+
+
+<script>
+    /* 
+        Script for calculating # of days until assignment due.
+        Note: Can't use Jekyll b/c it doesn't compile every time.
+    */
+    const trs = document.querySelectorAll('.assignments-table tr');
+    for (tr of trs) {
+        const lastTd = tr.querySelector('td:last-child');
+        if (lastTd) {
+            // const isReflection = tr.querySelector('td:nth-child(2)').innerHTML.includes('Reflection');
+            const nextToLastTd = lastTd.previousElementSibling;
+            nextToLastTd.style.maxWidth = "140px";
+            const dateString = lastTd.querySelector('.due-date').innerHTML;
+            const dueDate = new Date(dateString);
+            const numDays = (dueDate - new Date()) / (1000 * 3600 * 24);
+            // if (isReflection) {
+            //     nextToLastTd.innerHTML = nextToLastTd.innerHTML + " (before class)";
+            // }
+            if (numDays < -1) {
+                tr.classList.add('passed');
+                lastTd.innerHTML = "passed";
+            }
+            // else if (isReflection) {
+            //     lastTd.innerHTML = "<span style='font-family: Arial;'>&#8804;</span> " + (numDays + 1).toFixed();
+            //     //lastTd.innerHTML = '';
+            // }
+            else {
+                if (numDays < 0) {
+                    lastTd.innerHTML = "due today";
+                }
+                else {
+                    lastTd.innerHTML = (numDays + 1).toFixed();
+                }
+            }
+        }
+    }
+</script>
+
+
+            </main>
+            <footer>
+    <p>    
+        Northwestern University
+    </p>
+    <!-- 
+     -->
+
+</footer>
+
+        </div>
+            <script type="text/javascript" src="/assets/js/main.js"></script>
+    
+    <script src="https://kit.fontawesome.com/62a7c74d0d.js" crossorigin="anonymous"></script>
+    <script>
+        //little bit of a hack:
+        const scrollLeft = () => {
+            //console.log('scrollLeft');
+            document.documentElement.scrollLeft = 0;
+        };
+        setTimeout(scrollLeft, 100);
+    </script>
+    </body>
+</html>

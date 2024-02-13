@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Schedule</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/assets/main.css">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163192686-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-163192686-1');
+    </script>
+    </head>
+    <body class="one-column">
+        <div class="container">
+            <!-- banner -->
+<header>
+    <i class="desktop fas fa-balance-scale"></i>
+    <div class="title-text desktop">
+        <h1><a href="/">COURSE TITLE</a></h1>
+        <h2>COURSE TERM</h2>
+    </div>
+    <a class="mobile" href="#" aria-label="menu">
+        <i class="menu-toggle fas fa-bars"></i>
+    </a>
+    <h1 class="mobile">COURSE TITLE</h1>
+</header>
+
+            <nav>
+    <ul>
+        <li ><a href="/syllabus/">Syllabus</a></li>
+        <li class="active"><a href="/" >Schedule</a></li>
+        <li ><a href="/assignments/">Assignments</a></li>
+        <li ><a href="/resources/">Resources</a></li>
+    </ul>
+</nav>
+
+            <main>
+                
+
+    
+        <h1>Schedule</h1>
+    
+   
+                
+
+
+
+
+
+<section class="readings">
+<p>We’ll be releasing the course schedule 1-2 weeks at a time. Note that the schedule is dynamic and subject to change.</p>
+
+
+
+
+    
+    
+    
+    
+    
+    
+        
+        <h2>
+            
+                I. SECTION HEADING
+            
+        </h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Week</th>
+                    <th>Date</th>
+                    <th>Topic & Readings</th>
+                    <th>Slides</th>
+                    <th>Due</th>
+                </tr>
+            </thead>
+            <tbody>
+        
+    
+    <tr>
+        
+            <td><h3>Week 2</h3></td>
+            
+        
+        <td>
+            Thu, 01/11
+
+            <span class="due-date">
+                01/11/24
+            </span>
+        </td>
+        
+            <td>
+                
+                
+                
+
+                <h4 class="anchor" id="lecture_1">
+                    
+                    DAY TOPIC</h4>
+
+                
+                    
+                    
+
+
+
+<br><br>Please complete the following readings BEFORE class:
+
+<ul class="readings">
+
+    
+        <li>
+    
+    
+        AUTHOR
+    
+    
+    
+        (YEAR).
+    
+    
+    
+    
+    <a href="#">READING TITLE</a>, <em>SOURCE</em>.
+    
+    
+        <ul><li>NOTES</li></ul>
+    
+    
+</li>
+ 
+    
+
+</ul>
+
+
+
+
+
+
+
+ 
+                
+            </td>
+        
+        <td>
+            
+                
+                
+                     <h4 class="anchor" id="lecture_1">
+                <a class="lec" href=#>
+                    Day 1 <i class="fa fa-link"></i>
+                </a>
+            </h4>
+                
+            
+        </td>
+        <td>
+            
+            
+                
+                
+                 
+                    
+                    
+                    
+                    
+                    <a class="pj" href="/assignments/sample">Sample <i class="fa fa-link"></i></a>
+                    
+                
+                
+            
+        </td>
+    </tr>
+
+    
+    
+    
+    
+    
+    
+    <tr>
+        
+            <td></td>
+        
+        <td>
+            Fri, 01/12
+
+            <span class="due-date">
+                01/12/24
+            </span>
+        </td>
+        
+            <td>
+                
+                
+                
+
+                <h4 class="anchor" id="lecture_2">
+                    
+                    DAY TOPIC</h4>
+
+                
+                    
+                    
+
+
+
+<br><br>Please complete the following readings BEFORE class:
+
+<ul class="readings">
+
+    
+        <li>
+    
+    
+        AUTHOR
+    
+    
+    
+        (YEAR).
+    
+    
+    
+    
+    <a href="#">READING TITLE</a>, <em>SOURCE</em>.
+    
+    
+        <ul><li>NOTES</li></ul>
+    
+    
+</li>
+ 
+    
+
+</ul>
+
+
+
+
+
+
+
+ 
+                
+            </td>
+        
+        <td>
+            
+                
+                
+                     <h4 class="anchor" id="lecture_2">
+                <a class="lec" href=#>
+                    Day 2 <i class="fa fa-link"></i>
+                </a>
+            </h4>
+                
+            
+        </td>
+        <td>
+            
+            
+        </td>
+    </tr>
+
+    </tbody>
+</table>
+</section>
+
+
+<script>
+    /* 
+        Script for calculating # of days until assignment due.
+        Note: Can't use Jekyll b/c it doesn't compile every time.
+    */
+    const trs = document.querySelectorAll('tr');
+    for (tr of trs) {
+        const dateElement = tr.querySelector('.due-date');
+        if (dateElement) {
+            const dateString = dateElement.innerHTML;
+            const dueDate = new Date(dateString);
+            const numDays = (dueDate - new Date()) / (1000 * 3600 * 24);
+            if (numDays < -1) {
+                tr.classList.add('passed');
+            }
+        }
+    }
+</script>
+
+
+            </main>
+            <footer>
+    <p>    
+        Northwestern University
+    </p>
+    <!-- 
+     -->
+
+</footer>
+
+        </div>
+            <script type="text/javascript" src="/assets/js/main.js"></script>
+    
+    <script src="https://kit.fontawesome.com/62a7c74d0d.js" crossorigin="anonymous"></script>
+    <script>
+        //little bit of a hack:
+        const scrollLeft = () => {
+            //console.log('scrollLeft');
+            document.documentElement.scrollLeft = 0;
+        };
+        setTimeout(scrollLeft, 100);
+    </script>
+    </body>
+</html>
