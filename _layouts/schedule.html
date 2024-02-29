@@ -7,6 +7,7 @@ layout: default
 {% assign labs = site.assignments | where: 'type', 'lab' %}
 {% assign main_listing = site.lectures | concat: labs %}
 {% assign dateStart = site.term_start_date | date: '%s' %}
+{% assign sections = page.sections | split: ", " %}
 
 <section class="readings">
 {{content}}
@@ -23,13 +24,9 @@ layout: default
             </tbody></table>
         {% endif %}
         <h2>
-            {% if lecture.group == 1 %}
-                I. SECTION HEADING
-            {% elsif lecture.group == 1 %}
-                II. ANOTHER SECTION HEADING
-            {% else %}
-                X. UNDEFINED
-            {% endif %}
+            {% assign index = lecture.group | minus: 1 %}
+            {{sections[index]}}
+
         </h2>
         <table>
             <thead>

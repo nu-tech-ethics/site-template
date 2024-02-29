@@ -4,7 +4,7 @@ num: 2
 title: "DAY TOPIC"
 type: lecture
 draft: 0
-group: 1
+group: 2
 show_schedule: 1
 due_date: 2024-01-12
 slides:
