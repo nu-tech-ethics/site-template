@@ -1,7 +1,10 @@
 <nav>
     <ul>
+        {% assign url = page.url %}
         {% for page in site.pages %}
-             <li {% if page.url == {{ page.permalink }} %}class="active"{% endif %}><a href="{{page.permalink | relative_url}}">{{ page.title }}</a></li>
+            <li {% if url contains page.permalink %}class="active"{% endif %}>
+                <a href="{{page.permalink | relative_url}}">{{ page.title }}</a>
+            </li>
         {% endfor %}
     </ul>
 </nav>

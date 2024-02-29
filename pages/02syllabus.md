@@ -2,7 +2,7 @@
 layout: syllabus
 title: Syllabus
 type: page
-permalink: /syllabus/
+permalink: /syllabus
 course: "COURSE NAME HERE"
 professor: PROF NAME HERE
 pms: PMS HERE
